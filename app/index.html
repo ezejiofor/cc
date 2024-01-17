@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Azure Website</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(190, 157, 214);
+            color: rgb(18, 18, 18);
+            font-size: 16px; /* Set default font size */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 24px; /* Set font size for h1 */
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 60px; /* Set font size for h3 */
+            color: rgb(9, 77, 149); /* Set blue color for h3 */
+        }
+
+        p, #george {
+            font-weight: bold;
+            font-size: 30px; /* Set font size for p and #george */
+        }
+
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <img src="computacenter.png" alt="Computacenter Logo">
+    </header>
+    <h1>Hi all!</h1>
+    <h3>Welcome to Computacenter Devops team</h3>
+    <p>Demo: Deploying WEBAPP using TERRAFORM via AZURE-DEVOPS PIPELINE.</p>
+    <p>The VMs will be managed with ANSIBLE for configuration</p>
+
+
+    <p id="publicIP"></p> <!-- New paragraph for Public IP -->
+
+    <script>
+        // Use JavaScript to fetch and display the public IP address
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const publicIP = data.ip;
+                document.getElementById('publicIP').innerText = `Public IP: ${publicIP}`;
+            })
+            .catch(error => console.error('Error fetching public IP:', error));
+    </script>
+    <p id="george">George Ezejiofor</p>
+
+</body>
+</html>
